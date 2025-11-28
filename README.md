@@ -20,4 +20,6 @@ Run these codes on Terminal in workpace
 
 `export DATAVERSE_API_TOKEN="your_token_here"`
 
+- To upload the files, you need 1 json file and 1 zip file in each dataset:
 
+`python BulkLoad_Python.py --base-url https://demo.borealisdata.ca --dataverse-alias yourDataverseAlias --datasets-folder /your/folder/path/Datasets`
