@@ -462,7 +462,7 @@ if __name__ == '__main__':
 
 '''
 python remote_loader.py \
-  --remote-list "https://utoronto-my.sharepoint.com/:f:/g/personal/zeynep_cevik_utoronto_ca/Egdcqzq6wDhCqcGl66b2x1UB7xnIbqH9Dj7UdeTlqZkxWA?e=7AHvCG" \
+  --remote-list "link" \
   --base-url "https://demo.borealisdata.ca" \
   --dataverse-alias "zeynepcevik"
   '''
@@ -470,7 +470,7 @@ python remote_loader.py \
 #Replace YOUR_GRAPH_TOKEN with a Microsoft Graph Bearer token that has permission to read the shared items (short-lived token from Graph Explorer or an app token with appropriate scopes).
 '''
 python3 remote_loader.py \
-  --remote-list "https://utoronto-my.sharepoint.com/:f:/g/personal/zeynep_cevik_utoronto_ca/Egdcqzq6wDhCqcGl66b2x1UB7xnIbqH9Dj7UdeTlqZkxWA?e=7AHvCG" \
+  --remote-list "link" \
   --onedrive-token "YOUR_GRAPH_TOKEN" \
   --base-url "https://demo.borealisdata.ca" \
   --dataverse-alias "zeynepcevik"
@@ -486,16 +486,4 @@ python3 remote_loader.py \
   --dataverse-alias "zeynepcevik"
     '''
 
-'''Notes and safety
 
-The script will create datasets and then call delete_all_files_in_dataset for each dataset (this removes existing files). Test against a sandbox dataverse or use a test dataverse alias first.
-Tokens:
-OneDrive/SharePoint: obtain a Microsoft Graph bearer token (Graph Explorer for quick tests or an app/client credentials flow). Scopes: Files.Read.All / Sites.Read.All or delegated scopes that let you access the share.
-Google Drive: obtain an OAuth2 access token with Drive read scopes. For quick testing you can use gcloud auth application-default print-access-token if your account has access to the Drive folder.
-If you prefer not to expose tokens on the command line, store them in environment variables and pass them in (example below).
-If you want, I can:
-
-Run a quick local syntax/lint check (I can run python -m py_compile remote_loader.py for you).
-Add a --no-delete flag to prevent the automatic deletion step while you test. Which would you prefer?
-GPT-5 mini • 1x
-'''
