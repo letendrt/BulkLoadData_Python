@@ -22,7 +22,7 @@ Run these codes on Terminal in workpace
 
 - To upload the files, you need 1 json file and 1 zip file in each dataset:
 
-`python BulkLoad_Python.py --base-url https://demo.borealisdata.ca --dataverse-alias yourDataverseAlias --datasets-folder /your/folder/path/Datasets`
+`python BulkLoad_Python.py --base-url "https://demo.borealisdata.ca" --dataverse-alias "yourDataverseAlias" --datasets-folder "/your/folder/path/Datasets"`
 
 -To upload documents through One-drive, create a json file like in remote_list.json file which includes all urls for each dataset
 
